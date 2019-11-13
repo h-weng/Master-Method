@@ -1,0 +1,20 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+\title{Master Method}
+\date{\today}
+\section{Master Method}
+	Let T(n) be a monotonically increasing function.\\
+	\\
+	\\
+	If $$T(n) \leq aT(n/b) + O(n^d)$$
+	\\
+	Then,
+	\[ T(n) = 
+		\begin{cases}
+		O(n^d log n) & \quad \text{if } a = b^d\\
+		O(n^d) & \quad \text{if } a < b^d\\
+		O(n^{\log_{b}a}) & \quad \text{if } a > b^d\\
+		\end{cases}
+	\]
+\end{document}
