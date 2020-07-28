@@ -5,17 +5,19 @@
 \date{\today}
 \pagestyle{empty} 
 \section*{Master Method}
-	Let T(n) be a monotonically increasing function (a function that is increasing and non-decreasing).\\
+Let T(n) be a monotonically increasing function (a function that is increasing and non-decreasing).\\
 	\\
-	\\
-	If $$T(n) \leq aT(n/b) + O(n^d)$$
-	\\
-	Then,
-	\[ T(n) = 
-		\begin{cases}
-		O(n^d log n) & \quad \text{if } a = b^d\\
-		O(n^d) & \quad \text{if } a < b^d\\
-		O(n^{\log_{b}a}) & \quad \text{if } a > b^d\\
-		\end{cases}
-	\]
+	If the recurrence is of the form $T(n) = aT(n/b) + \Theta(n^k log^p n)$, given $a \geq 1, b > 1, k \geq 0$ and $p$ is a real number, then the complexity is defined as:\\
+	
+\begin{tabbing}
+1) If $a > b^k$, then $T(n) = \Theta(n^{log_b^a})$ \\
+\\
+2) If $a = b^k$ \=\\
+\> a. If $p > -1$, then $T(n) = \Theta(n^{log_b^a} log^{p+1} n)$	\\
+\> b. If $p = -1$, then $T(n) = \Theta(n^{log_b^a} log log n)$ \\
+\> c. If $p < -1$, then $T(n) = \Theta(n^{log_b^a})$\\
+3) If $a < b^k$ \\
+\> a. If $p \geq 0$, then $T(n) = \Theta(n^k log^p n)$\\
+\> b. If $p < 0$, then $T(n) = O(n^k)$ \\
+\end{tabbing}
 \end{document}
