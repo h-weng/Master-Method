@@ -10,12 +10,12 @@ Let T(n) be a monotonically increasing function (a function that is increasing a
 	If the recurrence is of the form $T(n) = aT(n/b) + \Theta(n^k log^p n)$, given $a \geq 1, b > 1, k \geq 0$ and $p$ is a real number, then the complexity is defined as:\\
 	
 \begin{tabbing}
-1) If $a > b^k$, then $T(n) = \Theta(n^{log_b^a})$ \\
+1) If $a > b^k$, then $T(n) = \Theta(n^{(log_b a})$ \\
 \\
 2) If $a = b^k$ \=\\
-\> a. If $p > -1$, then $T(n) = \Theta(n^{log_b^a} log^{p+1} n)$	\\
-\> b. If $p = -1$, then $T(n) = \Theta(n^{log_b^a} log log n)$ \\
-\> c. If $p < -1$, then $T(n) = \Theta(n^{log_b^a})$\\
+\> a. If $p > -1$, then $T(n) = \Theta(n^{log_b a} (log n)^{p+1}$	\\
+\> b. If $p = -1$, then $T(n) = \Theta(n^{log_b a} log log n)$ \\
+\> c. If $p < -1$, then $T(n) = \Theta(n^{(log_b a})$\\
 \\
 3) If $a < b^k$ \\
 \> a. If $p \geq 0$, then $T(n) = \Theta(n^k log^p n)$\\
